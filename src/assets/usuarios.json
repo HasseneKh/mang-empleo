@@ -1,0 +1,58 @@
+ [
+    {
+      "tipo": "demandante",
+      "nifPasaporte": "12345678A",
+      "nombre": "Ana",
+      "primerApellido": "García",
+      "segundoApellido": "López",
+      "genero": "F",
+      "fechaNacimiento": "1990-01-01",
+      "direccion": {
+        "calle": "Gran Vía",
+        "numero": "10",
+        "puerta": "3A",
+        "codigoPostal": "28013",
+        "ciudad": "Madrid"
+      },
+      "estudios": [
+        {
+          "nombreInstitucion": "Universidad Complutense",
+          "titulacion": "Grado en Derecho",
+          "fecha": "2012-06-30"
+        },
+        {
+          "nombreInstitucion": "Universidad Autónoma",
+          "titulacion": "Máster en Relaciones Laborales",
+          "fecha": "2014-06-30"
+        }
+      ]
+    },
+    {
+      "tipo": "empleado",
+      "nifPasaporte": "87654321B",
+      "nombre": "Luis",
+      "primerApellido": "Pérez",
+      "segundoApellido": "Martínez",
+      "genero": "M",
+      "fechaNacimiento": "1985-07-10",
+      "direccion": {
+        "calle": "Calle Mayor",
+        "numero": "22",
+        "puerta": "2B",
+        "codigoPostal": "28015",
+        "ciudad": "Madrid"
+      },
+      "experiencias": [
+        {
+          "nombreEmpresa": "BASF",
+          "puestoTrabajo": "Ingeniero de software",
+          "fecha": "2020-01-01"
+        },
+        {
+          "nombreEmpresa": "Siemens",
+          "puestoTrabajo": "Desarrollador full-stack",
+          "fecha": "2016-03-15"
+        }
+      ]
+    }
+  ]

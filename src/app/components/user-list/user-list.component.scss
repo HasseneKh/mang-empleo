@@ -1,0 +1,44 @@
+/* Centrer le container en plein écran */
+.container {
+  min-height: 100vh; /* hauteur minimum = hauteur écran */
+  padding: 1rem;
+  background: #f5f5f5; /* fond clair */
+}
+
+/* Card avec largeur max, responsive */
+mat-card {
+  width: 100%;
+  max-width: 1000px; /* largeur max */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Table pleine largeur */
+.full-width-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Forcer le scroll horizontal si table trop large */
+table {
+  min-width: 700px; /* Ajuster selon besoin */
+}
+
+/* Responsive - réduire la taille du texte sur petits écrans */
+@media (max-width: 600px) {
+  mat-card {
+    max-width: 100%;
+  }
+
+  table {
+    min-width: 0;
+    font-size: 12px;
+  }
+
+  /* Cacher certaines colonnes si besoin pour mobile */
+  th.mat-column-genero,
+  td.mat-column-genero,
+  th.mat-column-fechaNacimiento,
+  td.mat-column-fechaNacimiento {
+    display: none;
+  }
+}

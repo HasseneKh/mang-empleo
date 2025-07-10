@@ -1,0 +1,86 @@
+<div class="container">
+  <h2>Lista de Usuarios</h2>
+
+  <button mat-raised-button color="primary" (click)="onAdd()">
+    Agregar Usuario
+  </button>
+
+  <table
+    mat-table
+    [dataSource]="usuarios"
+    class="mat-elevation-z8"
+    style="width: 100%"
+  >
+    <!-- Tipo Column -->
+    <ng-container matColumnDef="tipo">
+      <th mat-header-cell *matHeaderCellDef>Type</th>
+      <td mat-cell *matCellDef="let user">{{ user.tipo }}</td>
+    </ng-container>
+
+    <!-- NIF/Pasaporte Column -->
+    <ng-container matColumnDef="nifPasaporte">
+      <th mat-header-cell *matHeaderCellDef>NIF/Pasaporte</th>
+      <td mat-cell *matCellDef="let user">{{ user.nifPasaporte }}</td>
+    </ng-container>
+
+    <!-- Nombre Column -->
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell *matHeaderCellDef>Nombre</th>
+      <td mat-cell *matCellDef="let user">{{ user.nombre }}</td>
+    </ng-container>
+
+    <!-- Primer Apellido Column -->
+    <ng-container matColumnDef="primerApellido">
+      <th mat-header-cell *matHeaderCellDef>Primer Apellido</th>
+      <td mat-cell *matCellDef="let user">{{ user.primerApellido }}</td>
+    </ng-container>
+
+    <!-- Género Column -->
+    <ng-container matColumnDef="genero">
+      <th mat-header-cell *matHeaderCellDef>Género</th>
+      <td mat-cell *matCellDef="let user">{{ user.genero }}</td>
+    </ng-container>
+
+    <!-- Fecha Nacimiento Column -->
+    <ng-container matColumnDef="fechaNacimiento">
+      <th mat-header-cell *matHeaderCellDef>Fecha Nacimiento</th>
+      <td mat-cell *matCellDef="let user">
+        {{ user.fechaNacimiento | date }}
+      </td>
+    </ng-container>
+
+    <!-- Acciones Column -->
+    <ng-container matColumnDef="acciones">
+      <th mat-header-cell *matHeaderCellDef>Acciones</th>
+      <td mat-cell *matCellDef="let user">
+        <button
+          mat-icon-button
+          color="primary"
+          aria-label="View"
+          (click)="onView(user)"
+        >
+          <mat-icon>visibility</mat-icon>
+        </button>
+        <button
+          mat-icon-button
+          color="accent"
+          aria-label="Edit"
+          (click)="onEdit(user)"
+        >
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button
+          mat-icon-button
+          color="warn"
+          aria-label="Delete"
+          (click)="onDelete(user)"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>

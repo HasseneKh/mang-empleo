@@ -1,0 +1,23 @@
+<form #warehouseForm="ngForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="outline" style="width: 100%">
+    <mat-label>nombre</mat-label>
+    <input
+      matInput
+      [(ngModel)]="usario.nombre"
+      name="uuid"
+      [disabled]="mode === 'view'"
+      required
+    />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" style="width: 100%">
+    <mat-label>primerApellido</mat-label>
+    <input
+      matInput
+      [(ngModel)]="usario.primerApellido"
+      name="uuid"
+      [disabled]="mode === 'view'"
+      required
+    />
+  </mat-form-field>
+</form>
